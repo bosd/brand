@@ -9,7 +9,7 @@
 
 # brand
 
-brand
+Manage brands in Odoo
 
 <!-- /!\ do not modify below this line -->
 
