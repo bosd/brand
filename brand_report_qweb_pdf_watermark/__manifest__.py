@@ -6,7 +6,7 @@
     "author": "OBS Solutions BV, " "Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Technical Settings",
-    "development_status": "Production/Stable",
+    "development_status": "Beta",
     "summary": "Add brand specific watermarks to your QWEB PDF reports",
     "website": "https://github.com/OCA/brand",
     "depends": ["web", "brand_external_report_layout", "report_qweb_pdf_watermark"],
