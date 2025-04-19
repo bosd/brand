@@ -9,12 +9,13 @@
         module could need extension to work properly.
     """,
     "license": "AGPL-3",
-    "author": "Odoo Community Association (OCA), Gert Pellin / Snakebyte Development",
+    "author": "Odoo Community Association (OCA), Gert Pellin / Snakebyte Development, bosd",
     "website": "https://github.com/OCA/brand",
     "version": "15.0.1.0.1",
     "depends": ["mail", "brand"],
     "data": [
         "data/mail_template.xml",
+        "wizard/mail_compose_message_view_ext.xml",
     ],
-    "maintainers": ["switch87"],
+    "maintainers": ["switch87", "bosd"],
 }
