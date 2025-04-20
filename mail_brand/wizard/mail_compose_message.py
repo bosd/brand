@@ -1,12 +1,10 @@
 from odoo import api, fields, models
 
 
-
 class MailComposeMessageExt(models.TransientModel):
     _inherit = "mail.compose.message"
 
     brand_id = fields.Many2one(comodel_name="res.brand", string="Brand")
-
 
     @api.model
     def default_get(self, fields):
@@ -26,7 +24,6 @@ class MailComposeMessageExt(models.TransientModel):
     def action_send_mail(self):
         """Override to explicitly pass the brand_id in the context."""
         self.ensure_one()
-        local_context = {}
         if self.brand_id:
-            local_context["email_brand"] = self.brand_id.id
-        return super().with_context(**local_context).action_send_mail()
+            self = self.with_context(email_brand=self.brand_id.id)
+        return super().action_send_mail()
